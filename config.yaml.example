@@ -1,0 +1,8 @@
+bibs:
+- name: rfcs
+  rfc_index:
+    remote: https://www.rfc-editor.org/rfc-index.xml
+- name: ids
+  bibxml_ids: 
+    remote: rsync.ietf.org::bibxml-ids/
+    local: ./bibxml-ids

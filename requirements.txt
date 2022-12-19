@@ -1,0 +1,5 @@
+appdirs
+lxml
+pybtex
+pydantic
+pyyaml
