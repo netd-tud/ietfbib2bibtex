@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference anchor="I-D.ietf-core-dns-over-coap">
+   <front>
+      <title>DNS over CoAP (DoC)</title>
+      <author initials="M. S." surname="Lenders" fullname="Martine Sophie Lenders">
+         <organization>Freie Universität Berlin</organization>
+      </author>
+      <author initials="C." surname="Amsüss" fullname="Christian Amsüss">
+         </author>
+      <author initials="C." surname="Gündoğan" fullname="Cenk Gündoğan">
+         <organization>HAW Hamburg</organization>
+      </author>
+      <author initials="T. C." surname="Schmidt" fullname="Thomas C. Schmidt">
+         <organization>HAW Hamburg</organization>
+      </author>
+      <author initials="M." surname="Wählisch" fullname="Matthias Wählisch">
+         <organization>Freie Universität Berlin</organization>
+      </author>
+      <date month="September" day="5" year="2022" />
+      <abstract>
+	 <t>   This document defines a protocol for sending DNS messages over the
+   Constrained Application Protocol (CoAP).  These CoAP messages are
+   protected by DTLS-Secured CoAP (CoAPS) or Object Security for
+   Constrained RESTful Environments (OSCORE) to provide encrypted DNS
+   message exchange for constrained devices in the Internet of Things
+   (IoT).
+
+	 </t>
+      </abstract>
+   </front>
+   <seriesInfo name="Internet-Draft" value="draft-ietf-core-dns-over-coap-00" />
+   <format type="TXT" target="https://www.ietf.org/archive/id/draft-ietf-core-dns-over-coap-00.txt" />
+</reference>

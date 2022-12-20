@@ -15,4 +15,4 @@ __email__ = "m.lenders@fu-berlin.de"
 
 
 if __name__ == "__main__":
-    ietfbib2bibtex.cli.main()
+    ietfbib2bibtex.cli.main()  # pragma: no cover

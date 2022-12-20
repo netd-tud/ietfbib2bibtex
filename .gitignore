@@ -1,6 +1,7 @@
 *.bib
 *.yaml
 bibxml-ids/
+test-report.xml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

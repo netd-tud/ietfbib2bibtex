@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference anchor="I-D.lenders-dns-cns">
+   <front>
+      <title>Guidance on DNS Message Composition in Constrained Networks</title>
+      <author initials="M. S." surname="Lenders" fullname="Martine Sophie Lenders">
+         <organization>Freie Universität Berlin</organization>
+      </author>
+      <author initials="T. C." surname="Schmidt" fullname="Thomas C. Schmidt">
+         <organization>HAW Hamburg</organization>
+      </author>
+      <author initials="M." surname="Wählisch" fullname="Matthias Wählisch">
+         <organization>Freie Universität Berlin</organization>
+      </author>
+      <date month="October" day="24" year="2022" />
+      <abstract>
+	 <t>   This document provides guidance on the composition of DNS messages in
+   constrained networks, where the link layer may restrict payload sizes
+   significantly and batteries challenge power consumption.
+
+	 </t>
+      </abstract>
+   </front>
+   <seriesInfo name="Internet-Draft" value="draft-lenders-dns-cns-00" />
+   <format type="TXT" target="https://www.ietf.org/archive/id/draft-lenders-dns-cns-00.txt" />
+</reference>

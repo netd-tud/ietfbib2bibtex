@@ -29,11 +29,11 @@ class Source(abc.ABC):
     @property
     @abc.abstractmethod
     def remote(self):
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
     @abc.abstractmethod
     def iterate_entries(self):
-        raise NotImplementedError()
+        raise NotImplementedError()  # pragma: no cover
 
 
 class RFCIndexSource(Source):

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference anchor="I-D.ietf-idn-amc-ace-v">
+   <front>
+      <title>AMC-ACE-V version 0.1.0</title>
+      <author initials="A. M." surname="Costello" fullname="Adam M. Costello">
+         </author>
+      <date month="June" day="1" year="2001" />
+      <abstract>
+	 <t>AMC-ACE-V is a reversible transformation from a sequence of Unicode
+[UNICODE] code points to a sequence of letters, digits, and hyphens
+(LDH characters).  AMC-ACE-V could be used as an ASCII-Compatible
+Encoding (ACE) for internationalized domain names [IDN] [IDNA].
+Besides domain names, there might also be other contexts where it is
+useful to transform Unicode characters into &#39;safe&#39; (delimiter-free)
+ASCII characters.  (If other contexts consider hyphens to be
+unsafe, a different character could be used to play its role, like
+underscore.)
+
+	 </t>
+      </abstract>
+   </front>
+   <seriesInfo name="Internet-Draft" value="draft-ietf-idn-amc-ace-v-00" />
+   <format type="TXT" target="https://www.ietf.org/archive/id/draft-ietf-idn-amc-ace-v-00.txt" />
+</reference>
