@@ -1,0 +1,45 @@
+name: Fetcher
+
+on:
+  workflow_run:
+    workflows:
+      - "Test ietfbib2bibtex"
+    branches: 
+      - main
+    types: 
+      - completed
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+      with:
+        ref: ${{ github.event.inputs.ref }}
+    - name: Get cache key
+      run: >
+        echo "CACHE_KEY="$(
+          rsync -vcizxL $(
+            grep -A 2 "bibxml_ids:" config.yaml.example |
+            awk '$1 ~ /remote:/ {print $2}'
+          ) | head -n 2 | tail -n 1 | awk '{gsub("/", "-"); print $3"T"$4}'
+        ) >> ${GITHUB_ENV}
+    - uses: actions/cache@main
+      id: cache-bibxml-ids
+      with:
+        path: ./bibxml-ids
+        key: ${{ runner.os }}-${{ env.CACHE_KEY }}
+        restore-keys: |
+          ${{ runner.os }}-
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@main
+    - name: Install
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install .
+    - name: Fetch by example config
+      run: ietfbib2bibtex -c config.yaml.example
+    - uses: actions/upload-artifact@main
+      with:
+        name: IETF-bibliographies
+        path: ./*.bib
