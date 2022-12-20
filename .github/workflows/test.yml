@@ -1,0 +1,69 @@
+name: Test ietfbib2bibtex
+
+on:
+  schedule:
+    - cron: '41 5 * * *'
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Git ref to checkout'
+        required: true
+        default: 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.7', '3.8', '3.9', '3.10']
+
+    steps:
+    - uses: actions/checkout@main
+      with:
+        ref: ${{ github.event.inputs.ref }}
+    # Required for Upload doc step
+    - name: Setup git config
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@main
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install tox
+    - name: Lint with tox
+      if: matrix.python-version == 3.10
+      run: tox -e black,flake8,lint
+    - name: Test with tox
+      run: |
+        pyenv="py$(echo "${{ matrix.python-version }}" | tr -d '.')"
+        tox -e ${pyenv}-test
+    - name: Build doc
+      if: matrix.python-version == 3.10
+      run: tox -e codespell,build-doc
+    # - name: Upload Coverage to Codecov
+    #   uses: codecov/codecov-action@main
+    #   with:
+    #     flags: ${{ matrix.python-version }}
+    - name: Upload doc
+      if: matrix.python-version == 3.10
+      run: |
+        git fetch origin gh_pages
+        git checkout gh_pages
+        cp -r docs/build/html/* docs/
+        rm -rf docs/build
+        git add docs/
+        git commit --author="Github Actions Bot <>" -m "Update docs" && \
+            git push origin gh_pages || exit 0
