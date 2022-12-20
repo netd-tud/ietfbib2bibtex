@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>ietfbib2bibtex &#8212; ietfbib2bibtex v0.9.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/readable.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="author" title="About these documents" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API documentation" href="modules.html" />
+    <link rel="prev" title="Welcome to ietfbib2bibtex’s documentation!" href="index.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="API documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to ietfbib2bibtex’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ietfbib2bibtex v0.9.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ietfbib2bibtex</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ietfbib2bibtex">
+<h1>ietfbib2bibtex<a class="headerlink" href="#ietfbib2bibtex" title="Permalink to this heading">¶</a></h1>
+<p>This tool aims to convert the XML-based formats of the IETF (<a class="reference external" href="https://bib.ietf.org/">bibxml</a> and <a class="reference external" href="https://www.rfc-editor.org/rfc-index.xml">rfc-index</a>) to
+<a class="reference external" href="http://bibtex.org">bibtex</a> format.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<p>TBD when GitHub is there</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install .
+</pre></div>
+</div>
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">¶</a></h3>
+<p>ietfbib2bibtex works on <a class="reference external" href="https://docs.python.org">Python</a> 3.7 or newer.</p>
+<p>See requirements.txt for the packages required.</p>
+</section>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<p>First you need a configuration file in YAML format. See config.yaml.example for an example.</p>
+<p>Then, you can run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ietfbib2bibtex -c <span class="s2">&quot;&lt;config-file&gt;&quot;</span>
+</pre></div>
+</div>
+<p>If you do not provide a configuration file with the <code class="docutils literal notranslate"><span class="pre">-c</span></code> argument, it is expected to be in the
+<code class="docutils literal notranslate"><span class="pre">ietfbib2bibtex</span></code> directory in the corresponding user configuration [appdir] of your operating
+system.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">ietfbib2bibtex</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation index</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to ietfbib2bibtex’s documentation!</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">API documentation</a></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/about.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="footer">
+    &copy; Copyright 2022, Martine S. Lenders.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.
+  </div>
+  
+  </body>
+</html>
