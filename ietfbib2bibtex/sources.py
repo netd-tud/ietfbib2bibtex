@@ -6,6 +6,8 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more detail
 
+"""Bibliography sources"""
+
 import abc
 import glob
 import logging
@@ -26,17 +28,23 @@ __email__ = "m.lenders@fu-berlin.de"
 
 
 class Source(abc.ABC):
+    """Base class for a bibliography source."""
+
     @property
     @abc.abstractmethod
     def remote(self):
+        """The remote resource of the bibliography source."""
         raise NotImplementedError()  # pragma: no cover
 
     @abc.abstractmethod
     def iterate_entries(self):
+        """Iterate over all valid entries of the bibliography source."""
         raise NotImplementedError()  # pragma: no cover
 
 
 class RFCIndexSource(Source):
+    """rfc-index.xml source."""
+
     def __init__(self, rfc_index_config: config.RFCIndexSource):
         self._config = rfc_index_config
 
@@ -91,6 +99,8 @@ class RFCIndexSource(Source):
 
 
 class BibXMLIDsSource(Source):
+    """rsync://rsync.ietf.org/bibxml-ids/ source."""
+
     def __init__(self, bibxml_ids_source_config: config.BibXMLIDsSource):
         self._config = bibxml_ids_source_config
 
@@ -100,6 +110,7 @@ class BibXMLIDsSource(Source):
 
     @property
     def local(self):
+        """The directory for the bibliography source."""
         return self._config.local
 
     def iterate_entries(self):

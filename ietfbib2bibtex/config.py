@@ -6,6 +6,8 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more details.
 
+"""Configuration"""
+
 import logging
 import os
 import typing
@@ -25,39 +27,55 @@ DEFAULT_CONFIG_FILE = os.path.join(
 
 
 class Source(pydantic.BaseModel):
+    """Base bibliography source configuration validation model."""
+
     remote: str
 
 
 class RFCIndexSource(Source):
+    """rfc-index.xml source configuration validation model."""
+
     @pydantic.validator("remote", always=True)
-    def http_uri_remote(cls, value):  # pylint: disable=no-self-argument
+    def _http_uri_remote(cls, value):  # pylint: disable=no-self-argument
         if not value.startswith("http:") and not value.startswith("https:"):
             raise ValueError("'remote' is not a HTTP URL")
         return value
 
 
 class BibXMLIDsSource(Source):
+    """rsync://rsync.ietf.org/bibxml-ids/ source configuration validation model."""
+
     local: str
 
 
 class Bib(pydantic.BaseModel):
+    """Bibliography configuration validation model."""
+
     name: str
     rfc_index: typing.Optional[RFCIndexSource] = None
     bibxml_ids: typing.Optional[BibXMLIDsSource] = None
 
     @pydantic.validator("bibxml_ids", always=True)
-    def mutually_exclusive(cls, value, values):  # pylint: disable=no-self-argument
+    def _mutually_exclusive(cls, value, values):  # pylint: disable=no-self-argument
         if values["rfc_index"] is not None and value:
             raise ValueError("'rfc_index' and 'bibxml_ids' are mutually exclusive.")
         return value
 
 
 class Config(pydantic.BaseSettings):
+    """Base settings validation model."""
+
     bibpath: typing.Optional[str] = None
     bibs: typing.List[Bib] = []
 
     @classmethod
     def from_file(cls, config_file: typing.Optional[str] = None):
+        """Read configuration from file.
+
+        :param config_file: Name of the configuration file.
+
+        :returns: :py:class:`Config` object generated from file.
+        """
         if config_file is None:
             try:
                 with open(

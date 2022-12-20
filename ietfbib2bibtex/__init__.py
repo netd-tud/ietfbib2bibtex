@@ -6,6 +6,10 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more details.
 
+"""This library aims to convert the XML-based formats of the IETF bibxml and rfc-index)
+to bibtex format.
+"""
+
 __author__ = "Martine S. Lenders"
 __copyright__ = "Copyright 2022 Freie Universität Berlin"
 __license__ = "LGPL v2.1"

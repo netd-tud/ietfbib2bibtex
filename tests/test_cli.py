@@ -6,6 +6,9 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more detail
 
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-module-docstring
+
 import argparse
 import sys
 

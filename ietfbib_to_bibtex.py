@@ -6,6 +6,8 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more details.
 
+"""Drop-in script for download without installing."""
+
 import ietfbib2bibtex.cli
 
 __author__ = "Martine S. Lenders"

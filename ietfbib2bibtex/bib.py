@@ -6,6 +6,8 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more detail
 
+"""Bibliography representation"""
+
 import logging
 import os
 
@@ -21,6 +23,8 @@ __email__ = "m.lenders@fu-berlin.de"
 
 
 class Bib:
+    """Representation of a bibliography."""
+
     def __init__(self, bib_config: config.Bib, bib_path=None):
         self.path = "./" if bib_path is None else bib_path
         self.name = bib_config.name
@@ -32,9 +36,11 @@ class Bib:
             raise ValueError(f"No source configured in {bib_config}")
 
     def iterate(self):
+        """Iterate over all valid entries of the source of the bibliography."""
         return self.source.iterate_entries()
 
     def create_bibtex(self):
+        """Create bibtex file ``name.bib`` from bibliography source."""
         logging.info("Checking out %s", self.name)
         data = pybtex.database.BibliographyData()
         for entry in self.iterate():
@@ -46,6 +52,11 @@ class Bib:
 
     @classmethod
     def create_all_bibtexs(cls, the_config: config.Config):
+        """Create bibtex files for all bibliographies in configuration.
+
+        :py:param the_config: :py:class:`ietfbib2bibtex.config.Config` object for
+                              configuration
+        """
         for bib_config in the_config.bibs:
             bib = cls(bib_config, bib_path=the_config.bibpath)
             bib.create_bibtex()

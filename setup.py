@@ -36,8 +36,8 @@ setup(
         "ietfbib2bibtex - "
         "A tool to generate bibtex bibliographies from IETF bibliographies"
     ),
-    # long_description=open("README.rst").read(),
-    # long_description_content_type="text/x-rst",
+    long_description=open("README.rst").read(),
+    long_description_content_type="text/x-rst",
     author="Martine S. Lenders",
     author_email="m.lenders@fu-berlin.de",
     url=URL,

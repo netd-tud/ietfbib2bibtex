@@ -6,14 +6,17 @@
 # General Public License v2.1. See the file LICENSE in the top level
 # directory for more detail
 
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-module-docstring
+# pylint: disable=redefined-outer-name
+
 import pytest
 
 import ietfbib2bibtex.config
 import ietfbib2bibtex.sources
 
 from .test_sources import mock_config  # noqa: F401 pylint: disable=unused-import
-
-# pylint: disable=redefined-outer-name
 
 __author__ = "Martine S. Lenders"
 __copyright__ = "Copyright 2022 Freie Universität Berlin"
