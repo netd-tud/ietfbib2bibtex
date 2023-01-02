@@ -64,7 +64,7 @@
 
 
 <div class="viewcode-block" id="parse_args"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.cli.parse_args">[docs]</a><span class="k">def</span> <span class="nf">parse_args</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Parse arguments for main command.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse arguments for main command.&quot;&quot;&quot;</span>
     <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
     <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
         <span class="s2">&quot;-c&quot;</span><span class="p">,</span>
@@ -75,7 +75,7 @@
 
 
 <div class="viewcode-block" id="main"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.cli.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;The main command: Take IETF bibliographies from configuration file (taken from</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The main command: Take IETF bibliographies from configuration file (taken from</span>
 <span class="sd">    CLI arguments if provided) and create bibtex format files from all of them.&quot;&quot;&quot;</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">parse_args</span><span class="p">()</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">config_file</span><span class="p">)</span>

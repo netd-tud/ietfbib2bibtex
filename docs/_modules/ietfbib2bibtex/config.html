@@ -71,13 +71,13 @@
 
 
 <div class="viewcode-block" id="Source"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Source">[docs]</a><span class="k">class</span> <span class="nc">Source</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Base bibliography source configuration validation model.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base bibliography source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">remote</span><span class="p">:</span> <span class="nb">str</span></div>
 
 
 <div class="viewcode-block" id="RFCIndexSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.RFCIndexSource">[docs]</a><span class="k">class</span> <span class="nc">RFCIndexSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;rfc-index.xml source configuration validation model.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;rfc-index.xml source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="nd">@pydantic</span><span class="o">.</span><span class="n">validator</span><span class="p">(</span><span class="s2">&quot;remote&quot;</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">_http_uri_remote</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  <span class="c1"># pylint: disable=no-self-argument</span>
@@ -87,13 +87,13 @@
 
 
 <div class="viewcode-block" id="BibXMLIDsSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.BibXMLIDsSource">[docs]</a><span class="k">class</span> <span class="nc">BibXMLIDsSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;rsync://rsync.ietf.org/bibxml-ids/ source configuration validation model.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;rsync://rsync.ietf.org/bibxml-ids/ source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">local</span><span class="p">:</span> <span class="nb">str</span></div>
 
 
 <div class="viewcode-block" id="Bib"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Bib">[docs]</a><span class="k">class</span> <span class="nc">Bib</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Bibliography configuration validation model.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Bibliography configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">rfc_index</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">RFCIndexSource</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -107,14 +107,14 @@
 
 
 <div class="viewcode-block" id="Config"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config">[docs]</a><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseSettings</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Base settings validation model.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base settings validation model.&quot;&quot;&quot;</span>
 
     <span class="n">bibpath</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">bibs</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Bib</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
 <div class="viewcode-block" id="Config.from_file"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config.from_file">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">config_file</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Read configuration from file.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Read configuration from file.</span>
 
 <span class="sd">        :param config_file: Name of the configuration file.</span>
 

@@ -67,7 +67,7 @@
 
 
 <div class="viewcode-block" id="Bib"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.bib.Bib">[docs]</a><span class="k">class</span> <span class="nc">Bib</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Representation of a bibliography.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Representation of a bibliography.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bib_config</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">Bib</span><span class="p">,</span> <span class="n">bib_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span> <span class="k">if</span> <span class="n">bib_path</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">bib_path</span>
@@ -80,11 +80,11 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No source configured in </span><span class="si">{</span><span class="n">bib_config</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Bib.iterate"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.bib.Bib.iterate">[docs]</a>    <span class="k">def</span> <span class="nf">iterate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Iterate over all valid entries of the source of the bibliography.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Iterate over all valid entries of the source of the bibliography.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">iterate_entries</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="Bib.create_bibtex"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.bib.Bib.create_bibtex">[docs]</a>    <span class="k">def</span> <span class="nf">create_bibtex</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Create bibtex file ``name.bib`` from bibliography source.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create bibtex file ``name.bib`` from bibliography source.&quot;&quot;&quot;</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Checking out </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">pybtex</span><span class="o">.</span><span class="n">database</span><span class="o">.</span><span class="n">BibliographyData</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iterate</span><span class="p">():</span>
@@ -92,11 +92,11 @@
         <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
             <span class="s2">&quot;Storing </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%s</span><span class="s2">.bib&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
         <span class="p">)</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2">.bib&quot;</span><span class="p">,</span> <span class="s2">&quot;bibtex&quot;</span><span class="p">)</span></div>
+        <span class="n">data</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2">.bib&quot;</span><span class="p">,</span> <span class="s2">&quot;bibtex&quot;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Bib.create_all_bibtexs"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.bib.Bib.create_all_bibtexs">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">create_all_bibtexs</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">the_config</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">Config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Create bibtex files for all bibliographies in configuration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create bibtex files for all bibliographies in configuration.</span>
 
 <span class="sd">        :py:param the_config: :py:class:`ietfbib2bibtex.config.Config` object for</span>
 <span class="sd">                              configuration</span>

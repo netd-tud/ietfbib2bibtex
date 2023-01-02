@@ -72,22 +72,22 @@
 
 
 <div class="viewcode-block" id="Source"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.sources.Source">[docs]</a><span class="k">class</span> <span class="nc">Source</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Base class for a bibliography source.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for a bibliography source.&quot;&quot;&quot;</span>
 
     <span class="nd">@property</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span> <span class="nf">remote</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The remote resource of the bibliography source.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The remote resource of the bibliography source.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span>
 
 <div class="viewcode-block" id="Source.iterate_entries"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.sources.Source.iterate_entries">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span> <span class="nf">iterate_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Iterate over all valid entries of the bibliography source.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Iterate over all valid entries of the bibliography source.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>  <span class="c1"># pragma: no cover</span></div></div>
 
 
 <div class="viewcode-block" id="RFCIndexSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.sources.RFCIndexSource">[docs]</a><span class="k">class</span> <span class="nc">RFCIndexSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;rfc-index.xml source.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;rfc-index.xml source.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rfc_index_config</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">RFCIndexSource</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">rfc_index_config</span>
@@ -143,7 +143,7 @@
 
 
 <div class="viewcode-block" id="BibXMLIDsSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.sources.BibXMLIDsSource">[docs]</a><span class="k">class</span> <span class="nc">BibXMLIDsSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;rsync://rsync.ietf.org/bibxml-ids/ source.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;rsync://rsync.ietf.org/bibxml-ids/ source.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bibxml_ids_source_config</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">BibXMLIDsSource</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">bibxml_ids_source_config</span>
@@ -154,7 +154,7 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">local</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The directory for the bibliography source.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The directory for the bibliography source.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_config</span><span class="o">.</span><span class="n">local</span>
 
 <div class="viewcode-block" id="BibXMLIDsSource.iterate_entries"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.sources.BibXMLIDsSource.iterate_entries">[docs]</a>    <span class="k">def</span> <span class="nf">iterate_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
