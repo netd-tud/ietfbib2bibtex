@@ -43,3 +43,4 @@ jobs:
       with:
         name: IETF-bibliographies
         path: ./*.bib
+        retention-days: 2
