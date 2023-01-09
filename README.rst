@@ -2,6 +2,12 @@
 ietfbib2bibtex
 ==============
 
+.. image:: https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml/badge.svg
+  :target: https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml
+
+.. image:: https://codecov.io/gh/ilabrg/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT
+  :target: https://codecov.io/gh/ilabrg/ietfbib2bibtex
+
 This tool aims to convert the XML-based formats of the IETF (`bibxml`_ and `rfc-index`_) to
 `bibtex`_ format.
 
