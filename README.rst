@@ -7,11 +7,12 @@ This tool aims to convert the XML-based formats of the IETF (`bibxml`_ and `rfc-
 
 Installation
 ============
-TBD when GitHub is there
+You can install ietfbib2bibtex using the GitHub link:
+
 
 .. code:: bash
 
-   pip install .
+   pip install git+https://github.com/ilabrg/ietfbib2bibtex/
 
 Dependencies
 ------------
