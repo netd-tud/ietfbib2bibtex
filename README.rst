@@ -38,7 +38,7 @@ Then, you can run
    ietfbib2bibtex -c "<config-file>"
 
 If you do not provide a configuration file with the ``-c`` argument, it is expected to be in the
-``ietfbib2bibtex`` directory in the corresponding user configuration [appdir] of your operating
+``ietfbib2bibtex`` directory in the corresponding user configuration `appdirs`_ of your operating
 system.
 
 .. _`appdir`: https://pypi.org/project/appdirs/
@@ -47,3 +47,4 @@ system.
 .. _`config.yaml.example`: ./config.yaml.example
 .. _`Python`: https://docs.python.org
 .. _`rfc-index`: https://www.rfc-editor.org/rfc-index.xml
+.. _`appdirs`: https://github.com/ActiveState/appdirs
