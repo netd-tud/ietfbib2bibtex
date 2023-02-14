@@ -29,7 +29,10 @@ See requirements.txt for the packages required.
 Usage
 =====
 
-First you need a configuration file in YAML format. See config.yaml.example for an example.
+First you need a configuration file in YAML format. See `config.yaml.example`_ for an example:
+
+.. literalinclude:: ./config.yaml.example
+   :language: yaml
 
 Then, you can run
 
@@ -43,7 +46,7 @@ operating system.
 
 .. _`bibtex`: http://bibtex.org
 .. _`bibxml`: https://bib.ietf.org/
-.. _`config.yaml.example`: ./config.yaml.example
+.. _`config.yaml.example`: https://github.com/ilabrg/ietfbib2bibtex/blob/main/config.yaml.example
 .. _`platformdirs`: https://platformdirs.readthedocs.io
 .. _`Python`: https://docs.python.org
 .. _`rfc-index`: https://www.rfc-editor.org/rfc-index.xml

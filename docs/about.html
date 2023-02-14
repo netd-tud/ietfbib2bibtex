@@ -69,7 +69,17 @@
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
-<p>First you need a configuration file in YAML format. See config.yaml.example for an example.</p>
+<p>First you need a configuration file in YAML format. See <a class="reference external" href="https://github.com/ilabrg/ietfbib2bibtex/blob/main/config.yaml.example">config.yaml.example</a> for an example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">bibs</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rfcs</span>
+<span class="w">  </span><span class="nt">rfc_index</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">remote</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.rfc-editor.org/rfc-index.xml</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ids</span>
+<span class="w">  </span><span class="nt">bibxml_ids</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">remote</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rsync.ietf.org::bibxml-ids/</span>
+<span class="w">    </span><span class="nt">local</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./bibxml-ids</span>
+</pre></div>
+</div>
 <p>Then, you can run</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ietfbib2bibtex<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;&lt;config-file&gt;&quot;</span>
 </pre></div>
