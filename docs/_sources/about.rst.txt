@@ -41,10 +41,9 @@ If you do not provide a configuration file with the ``-c`` argument, it is expec
 ``ietfbib2bibtex`` directory in the corresponding user configuration `appdirs`_ of your operating
 system.
 
-.. _`appdir`: https://pypi.org/project/appdirs/
+.. _`appdirs`: https://pypi.org/project/appdirs/
 .. _`bibtex`: http://bibtex.org
 .. _`bibxml`: https://bib.ietf.org/
 .. _`config.yaml.example`: ./config.yaml.example
 .. _`Python`: https://docs.python.org
 .. _`rfc-index`: https://www.rfc-editor.org/rfc-index.xml
-.. _`appdirs`: https://github.com/ActiveState/appdirs
