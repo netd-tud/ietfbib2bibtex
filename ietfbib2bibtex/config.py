@@ -12,7 +12,7 @@ import logging
 import os
 import typing
 
-import appdirs
+import platformdirs
 import pydantic
 import yaml
 
@@ -22,7 +22,7 @@ __license__ = "LGPL v2.1"
 __email__ = "m.lenders@fu-berlin.de"
 
 DEFAULT_CONFIG_FILE = os.path.join(
-    appdirs.user_config_dir(), "ietfbib2bibtex", "config.yaml"
+    platformdirs.user_config_dir(), "ietfbib2bibtex", "config.yaml"
 )
 
 

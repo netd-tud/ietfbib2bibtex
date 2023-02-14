@@ -38,12 +38,12 @@ Then, you can run
    ietfbib2bibtex -c "<config-file>"
 
 If you do not provide a configuration file with the ``-c`` argument, it is expected to be in the
-``ietfbib2bibtex`` directory in the corresponding user configuration `appdirs`_ of your operating
-system.
+``ietfbib2bibtex`` directory in the corresponding user configuration `platformdirs`_ of your
+operating system.
 
-.. _`appdirs`: https://pypi.org/project/appdirs/
 .. _`bibtex`: http://bibtex.org
 .. _`bibxml`: https://bib.ietf.org/
 .. _`config.yaml.example`: ./config.yaml.example
+.. _`platformdirs`: https://platformdirs.readthedocs.io
 .. _`Python`: https://docs.python.org
 .. _`rfc-index`: https://www.rfc-editor.org/rfc-index.xml

@@ -1,5 +1,5 @@
-appdirs
 lxml
+platformdirs
 pybtex
 pydantic
 pyyaml
