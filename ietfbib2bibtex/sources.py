@@ -13,9 +13,9 @@ import glob
 import logging
 import os
 import re
+import requests
+import socket
 import subprocess
-import urllib.request
-
 import lxml.etree
 import pybtex.database
 
@@ -25,7 +25,6 @@ __author__ = "Martine S. Lenders"
 __copyright__ = "Copyright 2022 Freie Universität Berlin"
 __license__ = "LGPL v2.1"
 __email__ = "m.lenders@fu-berlin.de"
-
 
 class Source(abc.ABC):
     """Base class for a bibliography source."""
@@ -53,49 +52,48 @@ class RFCIndexSource(Source):
         return self._config.remote
 
     def iterate_entries(self):
-        with urllib.request.urlopen(self.remote) as remote:
-            tree = lxml.etree.parse(remote)
-            root = tree.getroot()
+        response = requests.get(self.remote)
+        root = lxml.etree.fromstring(response.content)
 
-            for element in root.iter("{http://www.rfc-editor.org/rfc-index}rfc-entry"):
-                doc_id = element.find(
-                    "{http://www.rfc-editor.org/rfc-index}doc-id"
-                ).text
-                if not re.match(r"RFC\d+", doc_id):
-                    # erroneous tagging
-                    continue
-                title = element.find("{http://www.rfc-editor.org/rfc-index}title").text
-                yield re.sub(
-                    r"(RFC)0*([1-9][0-9]*)", r"\1-\2", doc_id
-                ), pybtex.database.Entry(
-                    "techreport",
-                    {
-                        "title": f"{{{title}}}",
-                        "institution": "IETF",
-                        "type": "RFC",
-                        "number": re.sub(r"RFC0*([1-9][0-9]*)", r"\1", doc_id),
-                        "month": (
-                            element.find("{http://www.rfc-editor.org/rfc-index}date")
-                            .find("{http://www.rfc-editor.org/rfc-index}month")
-                            .text
-                        ),
-                        "year": (
-                            element.find("{http://www.rfc-editor.org/rfc-index}date")
-                            .find("{http://www.rfc-editor.org/rfc-index}year")
-                            .text
-                        ),
-                    },
-                    persons={
-                        "author": [
-                            pybtex.database.Person(
-                                e.find("{http://www.rfc-editor.org/rfc-index}name").text
-                            )
-                            for e in element.findall(
-                                "{http://www.rfc-editor.org/rfc-index}author"
-                            )
-                        ],
-                    },
-                )
+        for element in root.iter("{http://www.rfc-editor.org/rfc-index}rfc-entry"):
+            doc_id = element.find(
+                "{http://www.rfc-editor.org/rfc-index}doc-id"
+            ).text
+            if not re.match(r"RFC\d+", doc_id):
+                # erroneous tagging
+                continue
+            title = element.find("{http://www.rfc-editor.org/rfc-index}title").text
+            yield re.sub(
+                r"(RFC)0*([1-9][0-9]*)", r"\1-\2", doc_id
+            ), pybtex.database.Entry(
+                "techreport",
+                {
+                    "title": f"{{{title}}}",
+                    "institution": "IETF",
+                    "type": "RFC",
+                    "number": re.sub(r"RFC0*([1-9][0-9]*)", r"\1", doc_id),
+                    "month": (
+                        element.find("{http://www.rfc-editor.org/rfc-index}date")
+                        .find("{http://www.rfc-editor.org/rfc-index}month")
+                        .text
+                    ),
+                    "year": (
+                        element.find("{http://www.rfc-editor.org/rfc-index}date")
+                        .find("{http://www.rfc-editor.org/rfc-index}year")
+                        .text
+                    ),
+                },
+                persons={
+                    "author": [
+                        pybtex.database.Person(
+                            e.find("{http://www.rfc-editor.org/rfc-index}name").text
+                        )
+                        for e in element.findall(
+                            "{http://www.rfc-editor.org/rfc-index}author"
+                        )
+                    ],
+                },
+            )
 
 
 class BibXMLIDsSource(Source):

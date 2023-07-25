@@ -4,3 +4,4 @@ pybtex
 pydantic
 pydantic-settings
 pyyaml
+requests
