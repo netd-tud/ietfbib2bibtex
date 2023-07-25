@@ -14,6 +14,7 @@ import typing
 
 import platformdirs
 import pydantic
+import pydantic_settings
 import yaml
 
 __author__ = "Martine S. Lenders"
@@ -62,7 +63,7 @@ class Bib(pydantic.BaseModel):
         return value
 
 
-class Config(pydantic.BaseSettings):
+class Config(pydantic_settings.BaseSettings):
     """Base settings validation model."""
 
     bibpath: typing.Optional[str] = None

@@ -2,4 +2,5 @@ lxml
 platformdirs
 pybtex
 pydantic
+pydantic-settings
 pyyaml
