@@ -82,6 +82,14 @@ class RFCIndexSource(Source):
                         .find("{http://www.rfc-editor.org/rfc-index}year")
                         .text
                     ),
+                    "doi": (
+                        element.find("{http://www.rfc-editor.org/rfc-index}doi")
+                        .text
+                    ),
+                    "url": "https://doi.org/{}".format(
+                        element.find("{http://www.rfc-editor.org/rfc-index}doi")
+                        .text
+                    ),
                 },
                 persons={
                     "author": [
@@ -130,21 +138,24 @@ class BibXMLIDsSource(Source):
                 number = re.sub(r".*-(\d{2})$", r"\1", series_info.get("value"))
                 unversioned = re.sub(r"(.*)-\d{2}$", r"\1", series_info.get("value"))
                 try:
+                    data = {
+                        "title": f"{{{front.find('title').text}}}",
+                        "institution": "IETF",
+                        "type": series_info.get("name")
+                        + (
+                            " -- work in progress"
+                            if series_info.get("name") == "Internet-Draft"
+                            else ""
+                        ),
+                        "number": number,
+                        "month": front.find("date").get("month"),
+                        "year": front.find("date").get("year"),
+                    }
+                    if root.get("target"):
+                        data["url"] = root.get("target")
                     entry = pybtex.database.Entry(
                         "techreport",
-                        {
-                            "title": f"{{{front.find('title').text}}}",
-                            "institution": "IETF",
-                            "type": series_info.get("name")
-                            + (
-                                " -- work in progress"
-                                if series_info.get("name") == "Internet-Draft"
-                                else ""
-                            ),
-                            "number": number,
-                            "month": front.find("date").get("month"),
-                            "year": front.find("date").get("year"),
-                        },
+                        data,
                         persons={
                             "author": [
                                 pybtex.database.Person(e.get("fullname"))
