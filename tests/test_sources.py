@@ -70,10 +70,10 @@ def test_rfcindexsource_iterate_entries(mocker, mock_config):
         mocker.Mock(
             return_value=mocker.Mock(
                 content=b"""<?xml version="1.0" encoding="UTF-8"?>
-<rfc-index xmlns="http://www.rfc-editor.org/rfc-index"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://www.rfc-editor.org/rfc-index
-                               http://www.rfc-editor.org/rfc-index.xsd">
+<rfc-index xmlns="https://www.rfc-editor.org/rfc-index"
+           xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://www.rfc-editor.org/rfc-index
+                               https://www.rfc-editor.org/rfc-index.xsd">
   <rfc-entry>
     <doc-id>RFC0781</doc-id>
     <title>Specification of the Internet Protocol (IP) timestamp option</title>
