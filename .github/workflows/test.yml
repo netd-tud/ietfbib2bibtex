@@ -18,6 +18,9 @@ on:
         required: true
         default: 'main'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,8 +36,8 @@ jobs:
     # Required for Upload doc step
     - name: Setup git config
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
+        git config user.name "Continuous Integration"
+        git config user.email "<miri64@users.noreply.github.com>"
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@main
       with:
@@ -65,5 +68,5 @@ jobs:
         cp -r docs/build/html/* docs/
         rm -rf docs/build
         git add docs/
-        git commit --author="Github Actions Bot <>" -m "Update docs" && \
+        git commit --author="Continuous Integration <miri64@users.noreply.github.com>" -m "Update docs" && \
             git push origin gh_pages || exit 0
