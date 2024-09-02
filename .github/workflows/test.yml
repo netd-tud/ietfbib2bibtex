@@ -60,6 +60,7 @@ jobs:
       uses: codecov/codecov-action@main
       with:
         flags: ${{ matrix.python-version }}
+        token: ${{ secrets.CODECOV_TOKEN }}
     - name: Upload doc
       if: matrix.python-version == 3.12
       run: |
