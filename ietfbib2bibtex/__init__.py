@@ -11,7 +11,10 @@ to bibtex format.
 """
 
 __author__ = "Martine S. Lenders"
-__copyright__ = "Copyright 2022 Freie Universität Berlin"
+__copyright__ = """
+Copyright 2022-23 Freie Universität Berlin
+Copyright 2023-24 TU Dresden
+"""
 __license__ = "LGPL v2.1"
 __email__ = "m.lenders@fu-berlin.de"
-__version__ = "v0.10.0"
+__version__ = "v0.11.0"

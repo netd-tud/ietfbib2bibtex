@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-# Copyright (C) 2022 Freie Universität Berlin
+# Copyright (C) 2022-23 Freie Universität Berlin
+# Copyright (C) 2023 HAW Hamburg
 #
 # This file is subject to the terms and conditions of the GNU Lesser
 # General Public License v2.1. See the file LICENSE in the top level

@@ -14,9 +14,9 @@ sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "ietfbib2bibtex"
-copyright = "2022, Martine S. Lenders"
+copyright = "2022-23 Freie Universität Berlin, 2023-24 TU Dresden"
 author = "Martine S. Lenders"
-release = "v0.9.0"
+release = "v0.10.0"
 
 # -- General configuration ---------------------------------------------------
 
