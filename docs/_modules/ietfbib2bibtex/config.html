@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ietfbib2bibtex.config &#8212; ietfbib2bibtex v0.9.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/readable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../../_static/readable.css?v=e058d051" />
+    <script src="../../_static/documentation_options.js?v=c20ff342"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -21,7 +20,7 @@
   
   
 
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -58,6 +57,7 @@
 
 <span class="kn">import</span> <span class="nn">platformdirs</span>
 <span class="kn">import</span> <span class="nn">pydantic</span>
+<span class="kn">import</span> <span class="nn">pydantic_settings</span>
 <span class="kn">import</span> <span class="nn">yaml</span>
 
 <span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Martine S. Lenders&quot;</span>
@@ -70,13 +70,18 @@
 <span class="p">)</span>
 
 
-<div class="viewcode-block" id="Source"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Source">[docs]</a><span class="k">class</span> <span class="nc">Source</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
+<div class="viewcode-block" id="Source">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Source">[docs]</a>
+<span class="k">class</span> <span class="nc">Source</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base bibliography source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">remote</span><span class="p">:</span> <span class="nb">str</span></div>
 
 
-<div class="viewcode-block" id="RFCIndexSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.RFCIndexSource">[docs]</a><span class="k">class</span> <span class="nc">RFCIndexSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RFCIndexSource">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.RFCIndexSource">[docs]</a>
+<span class="k">class</span> <span class="nc">RFCIndexSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;rfc-index.xml source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="nd">@pydantic</span><span class="o">.</span><span class="n">validator</span><span class="p">(</span><span class="s2">&quot;remote&quot;</span><span class="p">,</span> <span class="n">always</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -86,13 +91,19 @@
         <span class="k">return</span> <span class="n">value</span></div>
 
 
-<div class="viewcode-block" id="BibXMLIDsSource"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.BibXMLIDsSource">[docs]</a><span class="k">class</span> <span class="nc">BibXMLIDsSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BibXMLIDsSource">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.BibXMLIDsSource">[docs]</a>
+<span class="k">class</span> <span class="nc">BibXMLIDsSource</span><span class="p">(</span><span class="n">Source</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;rsync://rsync.ietf.org/bibxml-ids/ source configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">local</span><span class="p">:</span> <span class="nb">str</span></div>
 
 
-<div class="viewcode-block" id="Bib"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Bib">[docs]</a><span class="k">class</span> <span class="nc">Bib</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Bib">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Bib">[docs]</a>
+<span class="k">class</span> <span class="nc">Bib</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Bibliography configuration validation model.&quot;&quot;&quot;</span>
 
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
@@ -106,13 +117,18 @@
         <span class="k">return</span> <span class="n">value</span></div>
 
 
-<div class="viewcode-block" id="Config"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config">[docs]</a><span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">pydantic</span><span class="o">.</span><span class="n">BaseSettings</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Config">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config">[docs]</a>
+<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">pydantic_settings</span><span class="o">.</span><span class="n">BaseSettings</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Base settings validation model.&quot;&quot;&quot;</span>
 
     <span class="n">bibpath</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">bibs</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">Bib</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="Config.from_file"><a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config.from_file">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="Config.from_file">
+<a class="viewcode-back" href="../../ietfbib2bibtex.html#ietfbib2bibtex.config.Config.from_file">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">config_file</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read configuration from file.</span>
 
@@ -133,14 +149,16 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
                 <span class="n">config_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">Loader</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">config_dict</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">config_dict</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
             <div class="clearer"></div>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation index</a><ul>
@@ -148,7 +166,7 @@
   </ul></li>
   </ul></li>
 </ul>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
@@ -156,7 +174,7 @@
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -164,7 +182,7 @@
     </div>
   <div class="footer">
     &copy; Copyright 2022, Martine S. Lenders.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.
   </div>
   
   </body>

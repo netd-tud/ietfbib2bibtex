@@ -2,11 +2,11 @@
 ietfbib2bibtex
 ==============
 
-.. image:: https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml/badge.svg
-  :target: https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml
+.. image:: https://github.com/netd-tud/ietfbib2bibtex/actions/workflows/test.yml/badge.svg
+  :target: https://github.com/netd-tud/ietfbib2bibtex/actions/workflows/test.yml
 
-.. image:: https://codecov.io/gh/ilabrg/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT
-  :target: https://codecov.io/gh/ilabrg/ietfbib2bibtex
+.. image:: https://codecov.io/gh/netd-tud/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT
+  :target: https://codecov.io/gh/netd-tud/ietfbib2bibtex
 
 This tool aims to convert the XML-based formats of the IETF (`bibxml`_ and `rfc-index`_) to
 `bibtex`_ format.
@@ -18,7 +18,7 @@ You can install ietfbib2bibtex using the GitHub link:
 
 .. code:: bash
 
-   pip install git+https://github.com/ilabrg/ietfbib2bibtex/
+   pip install git+https://github.com/netd-tud/ietfbib2bibtex/
 
 Dependencies
 ------------
@@ -46,7 +46,7 @@ operating system.
 
 .. _`bibtex`: http://bibtex.org
 .. _`bibxml`: https://bib.ietf.org/
-.. _`config.yaml.example`: https://github.com/ilabrg/ietfbib2bibtex/blob/main/config.yaml.example
+.. _`config.yaml.example`: https://github.com/netd-tud/ietfbib2bibtex/blob/main/config.yaml.example
 .. _`platformdirs`: https://platformdirs.readthedocs.io
 .. _`Python`: https://docs.python.org
 .. _`rfc-index`: https://www.rfc-editor.org/rfc-index.xml

@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ietfbib2bibtex &#8212; ietfbib2bibtex v0.9.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/readable.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="_static/readable.css?v=e058d051" />
+    <script src="_static/documentation_options.js?v=c20ff342"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="author" title="About these documents" href="#" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -24,7 +23,7 @@
   
   
 
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -50,26 +49,28 @@
           <div class="body" role="main">
             
   <section id="ietfbib2bibtex">
-<h1>ietfbib2bibtex<a class="headerlink" href="#ietfbib2bibtex" title="Permalink to this heading">¶</a></h1>
-<a class="reference external image-reference" href="https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml"><img alt="https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml/badge.svg" src="https://github.com/ilabrg/ietfbib2bibtex/actions/workflows/test.yml/badge.svg" /></a>
-<a class="reference external image-reference" href="https://codecov.io/gh/ilabrg/ietfbib2bibtex"><img alt="https://codecov.io/gh/ilabrg/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT" src="https://codecov.io/gh/ilabrg/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT" /></a>
+<h1>ietfbib2bibtex<a class="headerlink" href="#ietfbib2bibtex" title="Link to this heading">¶</a></h1>
+<a class="reference external image-reference" href="https://github.com/netd-tud/ietfbib2bibtex/actions/workflows/test.yml"><img alt="https://github.com/netd-tud/ietfbib2bibtex/actions/workflows/test.yml/badge.svg" src="https://github.com/netd-tud/ietfbib2bibtex/actions/workflows/test.yml/badge.svg" />
+</a>
+<a class="reference external image-reference" href="https://codecov.io/gh/netd-tud/ietfbib2bibtex"><img alt="https://codecov.io/gh/netd-tud/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT" src="https://codecov.io/gh/netd-tud/ietfbib2bibtex/branch/main/graph/badge.svg?token=UKAN36HVBT" />
+</a>
 <p>This tool aims to convert the XML-based formats of the IETF (<a class="reference external" href="https://bib.ietf.org/">bibxml</a> and <a class="reference external" href="https://www.rfc-editor.org/rfc-index.xml">rfc-index</a>) to
 <a class="reference external" href="http://bibtex.org">bibtex</a> format.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>You can install ietfbib2bibtex using the GitHub link:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/ilabrg/ietfbib2bibtex/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/netd-tud/ietfbib2bibtex/
 </pre></div>
 </div>
 <section id="dependencies">
-<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">¶</a></h3>
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h3>
 <p>ietfbib2bibtex works on <a class="reference external" href="https://docs.python.org">Python</a> 3.7 or newer.</p>
 <p>See requirements.txt for the packages required.</p>
 </section>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
-<p>First you need a configuration file in YAML format. See <a class="reference external" href="https://github.com/ilabrg/ietfbib2bibtex/blob/main/config.yaml.example">config.yaml.example</a> for an example:</p>
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>First you need a configuration file in YAML format. See <a class="reference external" href="https://github.com/netd-tud/ietfbib2bibtex/blob/main/config.yaml.example">config.yaml.example</a> for an example:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">bibs</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rfcs</span>
 <span class="w">  </span><span class="nt">rfc_index</span><span class="p">:</span>
@@ -95,7 +96,7 @@ operating system.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -124,7 +125,7 @@ operating system.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -132,7 +133,7 @@ operating system.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -140,7 +141,7 @@ operating system.</p>
     </div>
   <div class="footer">
     &copy; Copyright 2022, Martine S. Lenders.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.
   </div>
   
   </body>

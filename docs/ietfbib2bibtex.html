@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ietfbib2bibtex package &#8212; ietfbib2bibtex v0.9.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/readable.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="_static/readable.css?v=e058d051" />
+    <script src="_static/documentation_options.js?v=c20ff342"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -23,7 +22,7 @@
   
   
 
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -47,23 +46,23 @@
           <div class="body" role="main">
             
   <section id="ietfbib2bibtex-package">
-<h1>ietfbib2bibtex package<a class="headerlink" href="#ietfbib2bibtex-package" title="Permalink to this heading">¶</a></h1>
+<h1>ietfbib2bibtex package<a class="headerlink" href="#ietfbib2bibtex-package" title="Link to this heading">¶</a></h1>
 <section id="module-ietfbib2bibtex">
-<span id="ietfbib2bibtex-module"></span><h2>ietfbib2bibtex module<a class="headerlink" href="#module-ietfbib2bibtex" title="Permalink to this heading">¶</a></h2>
+<span id="ietfbib2bibtex-module"></span><h2>ietfbib2bibtex module<a class="headerlink" href="#module-ietfbib2bibtex" title="Link to this heading">¶</a></h2>
 <p>This library aims to convert the XML-based formats of the IETF bibxml and rfc-index)
 to bibtex format.</p>
 </section>
 <section id="module-ietfbib2bibtex.bib">
-<span id="ietfbib2bibtex-bib-module"></span><h2>ietfbib2bibtex.bib module<a class="headerlink" href="#module-ietfbib2bibtex.bib" title="Permalink to this heading">¶</a></h2>
+<span id="ietfbib2bibtex-bib-module"></span><h2>ietfbib2bibtex.bib module<a class="headerlink" href="#module-ietfbib2bibtex.bib" title="Link to this heading">¶</a></h2>
 <p>Bibliography representation</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.bib.Bib">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.bib.</span></span><span class="sig-name descname"><span class="pre">Bib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bib_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bib_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.bib.</span></span><span class="sig-name descname"><span class="pre">Bib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bib_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bib_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Representation of a bibliography.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.bib.Bib.create_all_bibtexs">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_all_bibtexs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.Config" title="ietfbib2bibtex.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.create_all_bibtexs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.create_all_bibtexs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_all_bibtexs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.Config" title="ietfbib2bibtex.config.Config"><span class="pre">Config</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.create_all_bibtexs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.create_all_bibtexs" title="Link to this definition">¶</a></dt>
 <dd><p>Create bibtex files for all bibliographies in configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Py:param the_config<span class="colon">:</span></dt>
@@ -75,13 +74,13 @@ configuration</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.bib.Bib.create_bibtex">
-<span class="sig-name descname"><span class="pre">create_bibtex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.create_bibtex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.create_bibtex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_bibtex</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.create_bibtex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.create_bibtex" title="Link to this definition">¶</a></dt>
 <dd><p>Create bibtex file <code class="docutils literal notranslate"><span class="pre">name.bib</span></code> from bibliography source.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.bib.Bib.iterate">
-<span class="sig-name descname"><span class="pre">iterate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.iterate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.iterate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">iterate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/bib.html#Bib.iterate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.bib.Bib.iterate" title="Link to this definition">¶</a></dt>
 <dd><p>Iterate over all valid entries of the source of the bibliography.</p>
 </dd></dl>
 
@@ -89,77 +88,117 @@ configuration</p>
 
 </section>
 <section id="module-ietfbib2bibtex.cli">
-<span id="ietfbib2bibtex-cli-module"></span><h2>ietfbib2bibtex.cli module<a class="headerlink" href="#module-ietfbib2bibtex.cli" title="Permalink to this heading">¶</a></h2>
+<span id="ietfbib2bibtex-cli-module"></span><h2>ietfbib2bibtex.cli module<a class="headerlink" href="#module-ietfbib2bibtex.cli" title="Link to this heading">¶</a></h2>
 <p>CLI definitions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ietfbib2bibtex.cli.main">
-<span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.cli.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/cli.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.cli.main" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.cli.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/cli.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.cli.main" title="Link to this definition">¶</a></dt>
 <dd><p>The main command: Take IETF bibliographies from configuration file (taken from
 CLI arguments if provided) and create bibtex format files from all of them.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="ietfbib2bibtex.cli.parse_args">
-<span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.cli.</span></span><span class="sig-name descname"><span class="pre">parse_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/cli.html#parse_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.cli.parse_args" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.cli.</span></span><span class="sig-name descname"><span class="pre">parse_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/cli.html#parse_args"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.cli.parse_args" title="Link to this definition">¶</a></dt>
 <dd><p>Parse arguments for main command.</p>
 </dd></dl>
 
 </section>
 <section id="module-ietfbib2bibtex.config">
-<span id="ietfbib2bibtex-config-module"></span><h2>ietfbib2bibtex.config module<a class="headerlink" href="#module-ietfbib2bibtex.config" title="Permalink to this heading">¶</a></h2>
+<span id="ietfbib2bibtex-config-module"></span><h2>ietfbib2bibtex.config module<a class="headerlink" href="#module-ietfbib2bibtex.config" title="Link to this heading">¶</a></h2>
 <p>Configuration</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Bib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfc_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibxml_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Bib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Bib" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Bib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfc_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibxml_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Bib"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Bib" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <p>Bibliography configuration validation model.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.bibxml_ids">
-<span class="sig-name descname"><span class="pre">bibxml_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.bibxml_ids" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bibxml_ids</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.bibxml_ids" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'bibxml_ids':</span> <span class="pre">FieldInfo(annotation=Union[BibXMLIDsSource,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None,</span> <span class="pre">validate_default=True),</span> <span class="pre">'name':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'rfc_index':</span> <span class="pre">FieldInfo(annotation=Union[RFCIndexSource,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None)}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.name" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Bib.rfc_index">
-<span class="sig-name descname"><span class="pre">rfc_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.rfc_index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rfc_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Bib.rfc_index" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.BibXMLIDsSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">BibXMLIDsSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#BibXMLIDsSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">BibXMLIDsSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#BibXMLIDsSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ietfbib2bibtex.config.Source" title="ietfbib2bibtex.config.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code></a></p>
 <p>rsync://rsync.ietf.org/bibxml-ids/ source configuration validation model.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.BibXMLIDsSource.local">
-<span class="sig-name descname"><span class="pre">local</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource.local" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">local</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource.local" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.BibXMLIDsSource.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.BibXMLIDsSource.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.BibXMLIDsSource.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'local':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True),</span> <span class="pre">'remote':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Config">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;object</span> <span class="pre">object&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">PathLike</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Config" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_case_sensitive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DotenvType</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_ignore_empty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_none_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_enums</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prog_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_settings_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">CliSettingsSource</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_none_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_hide_none_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_avoid_json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_enforce_required</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_use_class_docs_for_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_exit_on_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bibs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Config" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSettings</span></code></p>
 <p>Base settings validation model.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.bibpath">
-<span class="sig-name descname"><span class="pre">bibpath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.bibpath" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bibpath</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.bibpath" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.bibs">
-<span class="sig-name descname"><span class="pre">bibs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.bibs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bibs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#ietfbib2bibtex.config.Bib" title="ietfbib2bibtex.config.Bib"><span class="pre">Bib</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.bibs" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.from_file">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Config.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Config.from_file" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Config.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Config.from_file" title="Link to this definition">¶</a></dt>
 <dd><p>Read configuration from file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -171,51 +210,111 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">SettingsConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'case_sensitive':</span> <span class="pre">False,</span> <span class="pre">'cli_avoid_json':</span> <span class="pre">False,</span> <span class="pre">'cli_enforce_required':</span> <span class="pre">False,</span> <span class="pre">'cli_exit_on_error':</span> <span class="pre">True,</span> <span class="pre">'cli_hide_none_type':</span> <span class="pre">False,</span> <span class="pre">'cli_parse_args':</span> <span class="pre">None,</span> <span class="pre">'cli_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'cli_prefix':</span> <span class="pre">'',</span> <span class="pre">'cli_prog_name':</span> <span class="pre">None,</span> <span class="pre">'cli_settings_source':</span> <span class="pre">None,</span> <span class="pre">'cli_use_class_docs_for_groups':</span> <span class="pre">False,</span> <span class="pre">'env_file':</span> <span class="pre">None,</span> <span class="pre">'env_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'env_ignore_empty':</span> <span class="pre">False,</span> <span class="pre">'env_nested_delimiter':</span> <span class="pre">None,</span> <span class="pre">'env_parse_enums':</span> <span class="pre">None,</span> <span class="pre">'env_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'env_prefix':</span> <span class="pre">'',</span> <span class="pre">'extra':</span> <span class="pre">'forbid',</span> <span class="pre">'json_file':</span> <span class="pre">None,</span> <span class="pre">'json_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'protected_namespaces':</span> <span class="pre">('model_',</span> <span class="pre">'settings_'),</span> <span class="pre">'secrets_dir':</span> <span class="pre">None,</span> <span class="pre">'toml_file':</span> <span class="pre">None,</span> <span class="pre">'validate_default':</span> <span class="pre">True,</span> <span class="pre">'yaml_file':</span> <span class="pre">None,</span> <span class="pre">'yaml_file_encoding':</span> <span class="pre">None}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Config.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'bibpath':</span> <span class="pre">FieldInfo(annotation=Union[str,</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None),</span> <span class="pre">'bibs':</span> <span class="pre">FieldInfo(annotation=List[Bib],</span> <span class="pre">required=False,</span> <span class="pre">default=[])}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Config.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.RFCIndexSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">RFCIndexSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#RFCIndexSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.RFCIndexSource" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">RFCIndexSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#RFCIndexSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.RFCIndexSource" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ietfbib2bibtex.config.Source" title="ietfbib2bibtex.config.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code></a></p>
 <p>rfc-index.xml source configuration validation model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.RFCIndexSource.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.RFCIndexSource.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.RFCIndexSource.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.RFCIndexSource.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.RFCIndexSource.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'remote':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">validate_default=True)}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.RFCIndexSource.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Source">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Source" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.config.</span></span><span class="sig-name descname"><span class="pre">Source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/config.html#Source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.config.Source" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <p>Base bibliography source configuration validation model.</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Source.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Source.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Source.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Source.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ietfbib2bibtex.config.Source.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'remote':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Source.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="ietfbib2bibtex.config.Source.remote">
-<span class="sig-name descname"><span class="pre">remote</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Source.remote" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">remote</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#ietfbib2bibtex.config.Source.remote" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="module-ietfbib2bibtex.sources">
-<span id="ietfbib2bibtex-sources-module"></span><h2>ietfbib2bibtex.sources module<a class="headerlink" href="#module-ietfbib2bibtex.sources" title="Permalink to this heading">¶</a></h2>
+<span id="ietfbib2bibtex-sources-module"></span><h2>ietfbib2bibtex.sources module<a class="headerlink" href="#module-ietfbib2bibtex.sources" title="Link to this heading">¶</a></h2>
 <p>Bibliography sources</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.BibXMLIDsSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">BibXMLIDsSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bibxml_ids_source_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#BibXMLIDsSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">BibXMLIDsSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bibxml_ids_source_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource" title="ietfbib2bibtex.config.BibXMLIDsSource"><span class="pre">BibXMLIDsSource</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#BibXMLIDsSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ietfbib2bibtex.sources.Source" title="ietfbib2bibtex.sources.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code></a></p>
 <p>rsync://rsync.ietf.org/bibxml-ids/ source.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.BibXMLIDsSource.iterate_entries">
-<span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#BibXMLIDsSource.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.iterate_entries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#BibXMLIDsSource.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.iterate_entries" title="Link to this definition">¶</a></dt>
 <dd><p>Iterate over all valid entries of the bibliography source.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.BibXMLIDsSource.local">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.local" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">local</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.local" title="Link to this definition">¶</a></dt>
 <dd><p>The directory for the bibliography source.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.BibXMLIDsSource.remote">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.remote" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.BibXMLIDsSource.remote" title="Link to this definition">¶</a></dt>
 <dd><p>The remote resource of the bibliography source.</p>
 </dd></dl>
 
@@ -223,18 +322,18 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.RFCIndexSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">RFCIndexSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rfc_index_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#RFCIndexSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">RFCIndexSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rfc_index_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource" title="ietfbib2bibtex.config.RFCIndexSource"><span class="pre">RFCIndexSource</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#RFCIndexSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ietfbib2bibtex.sources.Source" title="ietfbib2bibtex.sources.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">Source</span></code></a></p>
 <p>rfc-index.xml source.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.RFCIndexSource.iterate_entries">
-<span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#RFCIndexSource.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource.iterate_entries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#RFCIndexSource.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource.iterate_entries" title="Link to this definition">¶</a></dt>
 <dd><p>Iterate over all valid entries of the bibliography source.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.RFCIndexSource.remote">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource.remote" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.RFCIndexSource.remote" title="Link to this definition">¶</a></dt>
 <dd><p>The remote resource of the bibliography source.</p>
 </dd></dl>
 
@@ -242,18 +341,18 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.Source">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">Source</span></span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#Source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.Source" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ietfbib2bibtex.sources.</span></span><span class="sig-name descname"><span class="pre">Source</span></span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#Source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.Source" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <p>Base class for a bibliography source.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.Source.iterate_entries">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#Source.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.Source.iterate_entries" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">iterate_entries</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ietfbib2bibtex/sources.html#Source.iterate_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ietfbib2bibtex.sources.Source.iterate_entries" title="Link to this definition">¶</a></dt>
 <dd><p>Iterate over all valid entries of the bibliography source.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="ietfbib2bibtex.sources.Source.remote">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.Source.remote" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote</span></span><a class="headerlink" href="#ietfbib2bibtex.sources.Source.remote" title="Link to this definition">¶</a></dt>
 <dd><p>The remote resource of the bibliography source.</p>
 </dd></dl>
 
@@ -267,7 +366,7 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
@@ -291,22 +390,39 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
 <li><a class="reference internal" href="#module-ietfbib2bibtex.config">ietfbib2bibtex.config module</a><ul>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Bib"><code class="docutils literal notranslate"><span class="pre">Bib</span></code></a><ul>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.bibxml_ids"><code class="docutils literal notranslate"><span class="pre">Bib.bibxml_ids</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Bib.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.model_config"><code class="docutils literal notranslate"><span class="pre">Bib.model_config</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.model_fields"><code class="docutils literal notranslate"><span class="pre">Bib.model_fields</span></code></a></li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.name"><code class="docutils literal notranslate"><span class="pre">Bib.name</span></code></a></li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Bib.rfc_index"><code class="docutils literal notranslate"><span class="pre">Bib.rfc_index</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource"><code class="docutils literal notranslate"><span class="pre">BibXMLIDsSource</span></code></a><ul>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource.local"><code class="docutils literal notranslate"><span class="pre">BibXMLIDsSource.local</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">BibXMLIDsSource.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_config"><code class="docutils literal notranslate"><span class="pre">BibXMLIDsSource.model_config</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.BibXMLIDsSource.model_fields"><code class="docutils literal notranslate"><span class="pre">BibXMLIDsSource.model_fields</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a><ul>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Config.bibpath"><code class="docutils literal notranslate"><span class="pre">Config.bibpath</span></code></a></li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Config.bibs"><code class="docutils literal notranslate"><span class="pre">Config.bibs</span></code></a></li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Config.from_file"><code class="docutils literal notranslate"><span class="pre">Config.from_file()</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Config.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Config.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Config.model_config"><code class="docutils literal notranslate"><span class="pre">Config.model_config</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Config.model_fields"><code class="docutils literal notranslate"><span class="pre">Config.model_fields</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource"><code class="docutils literal notranslate"><span class="pre">RFCIndexSource</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource"><code class="docutils literal notranslate"><span class="pre">RFCIndexSource</span></code></a><ul>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RFCIndexSource.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource.model_config"><code class="docutils literal notranslate"><span class="pre">RFCIndexSource.model_config</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.RFCIndexSource.model_fields"><code class="docutils literal notranslate"><span class="pre">RFCIndexSource.model_fields</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Source"><code class="docutils literal notranslate"><span class="pre">Source</span></code></a><ul>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Source.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Source.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Source.model_config"><code class="docutils literal notranslate"><span class="pre">Source.model_config</span></code></a></li>
+<li><a class="reference internal" href="#ietfbib2bibtex.config.Source.model_fields"><code class="docutils literal notranslate"><span class="pre">Source.model_fields</span></code></a></li>
 <li><a class="reference internal" href="#ietfbib2bibtex.config.Source.remote"><code class="docutils literal notranslate"><span class="pre">Source.remote</span></code></a></li>
 </ul>
 </li>
@@ -350,7 +466,7 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
-<div id="searchbox" style="display: none" role="search">
+<search id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
@@ -358,7 +474,7 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
       <input type="submit" value="Go" />
     </form>
     </div>
-</div>
+</search>
 <script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
@@ -366,7 +482,7 @@ CLI arguments if provided) and create bibtex format files from all of them.</p>
     </div>
   <div class="footer">
     &copy; Copyright 2022, Martine S. Lenders.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.3.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.
   </div>
   
   </body>
