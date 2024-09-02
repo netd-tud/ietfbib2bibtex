@@ -13,9 +13,9 @@ import glob
 import logging
 import os
 import re
-import requests
-import socket
 import subprocess
+
+import requests
 import lxml.etree
 import pybtex.database
 
@@ -25,6 +25,7 @@ __author__ = "Martine S. Lenders"
 __copyright__ = "Copyright 2022 Freie Universität Berlin"
 __license__ = "LGPL v2.1"
 __email__ = "m.lenders@fu-berlin.de"
+
 
 class Source(abc.ABC):
     """Base class for a bibliography source."""
@@ -52,13 +53,11 @@ class RFCIndexSource(Source):
         return self._config.remote
 
     def iterate_entries(self):
-        response = requests.get(self.remote)
+        response = requests.get(self.remote, timeout=5)
         root = lxml.etree.fromstring(response.content)
 
         for element in root.iter("{http://www.rfc-editor.org/rfc-index}rfc-entry"):
-            doc_id = element.find(
-                "{http://www.rfc-editor.org/rfc-index}doc-id"
-            ).text
+            doc_id = element.find("{http://www.rfc-editor.org/rfc-index}doc-id").text
             if not re.match(r"RFC\d+", doc_id):
                 # erroneous tagging
                 continue
@@ -83,12 +82,11 @@ class RFCIndexSource(Source):
                         .text
                     ),
                     "doi": (
-                        element.find("{http://www.rfc-editor.org/rfc-index}doi")
-                        .text
+                        element.find("{http://www.rfc-editor.org/rfc-index}doi").text
                     ),
+                    # pylint: disable=consider-using-f-string
                     "url": "https://doi.org/{}".format(
-                        element.find("{http://www.rfc-editor.org/rfc-index}doi")
-                        .text
+                        element.find("{http://www.rfc-editor.org/rfc-index}doi").text
                     ),
                 },
                 persons={
