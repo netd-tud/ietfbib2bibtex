@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
 project = "ietfbib2bibtex"
 copyright = "2022-23 Freie Universität Berlin, 2023-24 TU Dresden"
 author = "Martine S. Lenders"
-release = "v0.10.0"
+release = "v0.11.0"
 
 # -- General configuration ---------------------------------------------------
 
