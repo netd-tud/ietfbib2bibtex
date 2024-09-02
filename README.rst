@@ -22,7 +22,7 @@ You can install ietfbib2bibtex using the GitHub link:
 
 Dependencies
 ------------
-ietfbib2bibtex works on `Python`_ 3.7 or newer.
+ietfbib2bibtex works on `Python`_ 3.8 or newer.
 
 See requirements.txt for the packages required.
 
