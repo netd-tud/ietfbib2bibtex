@@ -59,8 +59,7 @@ def test_bib_init(mock_config, exp_exc):  # noqa: F811
 
 
 def mock_generator(sequence):
-    for entry in sequence:
-        yield entry
+    yield from sequence
 
 
 @pytest.mark.parametrize(
