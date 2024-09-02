@@ -56,12 +56,12 @@ class RFCIndexSource(Source):
         response = requests.get(self.remote, timeout=5)
         root = lxml.etree.fromstring(response.content)
 
-        for element in root.iter("{http://www.rfc-editor.org/rfc-index}rfc-entry"):
-            doc_id = element.find("{http://www.rfc-editor.org/rfc-index}doc-id").text
+        for element in root.iter("{https://www.rfc-editor.org/rfc-index}rfc-entry"):
+            doc_id = element.find("{https://www.rfc-editor.org/rfc-index}doc-id").text
             if not re.match(r"RFC\d+", doc_id):
                 # erroneous tagging
                 continue
-            title = element.find("{http://www.rfc-editor.org/rfc-index}title").text
+            title = element.find("{https://www.rfc-editor.org/rfc-index}title").text
             yield re.sub(
                 r"(RFC)0*([1-9][0-9]*)", r"\1-\2", doc_id
             ), pybtex.database.Entry(
@@ -72,30 +72,30 @@ class RFCIndexSource(Source):
                     "type": "RFC",
                     "number": re.sub(r"RFC0*([1-9][0-9]*)", r"\1", doc_id),
                     "month": (
-                        element.find("{http://www.rfc-editor.org/rfc-index}date")
-                        .find("{http://www.rfc-editor.org/rfc-index}month")
+                        element.find("{https://www.rfc-editor.org/rfc-index}date")
+                        .find("{https://www.rfc-editor.org/rfc-index}month")
                         .text
                     ),
                     "year": (
-                        element.find("{http://www.rfc-editor.org/rfc-index}date")
-                        .find("{http://www.rfc-editor.org/rfc-index}year")
+                        element.find("{https://www.rfc-editor.org/rfc-index}date")
+                        .find("{https://www.rfc-editor.org/rfc-index}year")
                         .text
                     ),
                     "doi": (
-                        element.find("{http://www.rfc-editor.org/rfc-index}doi").text
+                        element.find("{https://www.rfc-editor.org/rfc-index}doi").text
                     ),
                     # pylint: disable=consider-using-f-string
                     "url": "https://doi.org/{}".format(
-                        element.find("{http://www.rfc-editor.org/rfc-index}doi").text
+                        element.find("{https://www.rfc-editor.org/rfc-index}doi").text
                     ),
                 },
                 persons={
                     "author": [
                         pybtex.database.Person(
-                            e.find("{http://www.rfc-editor.org/rfc-index}name").text
+                            e.find("{https://www.rfc-editor.org/rfc-index}name").text
                         )
                         for e in element.findall(
-                            "{http://www.rfc-editor.org/rfc-index}author"
+                            "{https://www.rfc-editor.org/rfc-index}author"
                         )
                     ],
                 },
