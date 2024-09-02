@@ -66,9 +66,10 @@ def test_rfcindexsource_init_remote(mock_config):
 )
 def test_rfcindexsource_iterate_entries(mocker, mock_config):
     mocker.patch(
-        "urllib.request.urlopen",
-        mocker.mock_open(
-            read_data="""<?xml version="1.0" encoding="UTF-8"?>
+        "requests.get",
+        mocker.Mock(
+            return_value=mocker.Mock(
+                content=b"""<?xml version="1.0" encoding="UTF-8"?>
 <rfc-index xmlns="http://www.rfc-editor.org/rfc-index"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.rfc-editor.org/rfc-index
@@ -137,6 +138,7 @@ def test_rfcindexsource_iterate_entries(mocker, mock_config):
     <doc-id>BCP0195</doc-id>
   </rfc-entry>
 </rfc-index>"""
+            ),
         ),
     )
     source = ietfbib2bibtex.sources.RFCIndexSource(mock_config.bibs[0].rfc_index)
