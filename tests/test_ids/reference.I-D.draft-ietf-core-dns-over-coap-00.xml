@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reference anchor="I-D.ietf-core-dns-over-coap">
+<reference anchor="I-D.ietf-core-dns-over-coap" target="https://datatracker.ietf.org/doc/html/draft-lenders-dns-over-coap-00">
    <front>
       <title>DNS over CoAP (DoC)</title>
       <author initials="M. S." surname="Lenders" fullname="Martine Sophie Lenders">
