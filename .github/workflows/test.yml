@@ -57,7 +57,7 @@ jobs:
       if: matrix.python-version == 3.12
       run: tox -e codespell,build-doc
     - name: Upload Coverage to Codecov
-      uses: codecov/codecov-action@main
+      uses: codecov/codecov-action@v4
       with:
         flags: ${{ matrix.python-version }}
         token: ${{ secrets.CODECOV_TOKEN }}
